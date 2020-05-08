@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <include
+            android:id="@+id/titleLayout"
+            layout="@layout/titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height" />
+
+        <ImageView
+            android:id="@+id/mPhoneIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_middle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleLayout"
+            app:srcCompat="@drawable/ic_beep_otp" />
+
+        <TextView
+            android:id="@+id/mOtpTipTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:paddingHorizontal="@dimen/common_margin_large"
+            android:text="@string/otp_tip1"
+            android:textAlignment="center"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/mPhoneIv" />
+
+        <com.storehub.beepcore.view.PinEntryEditText
+            android:id="@+id/mCodeEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_size55"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/common_margin_large"
+            android:layout_marginVertical="@dimen/common_margin"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="number"
+            android:maxLength="5"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/text_max_size"
+            app:layout_constraintTop_toBottomOf="@+id/mOtpTipTv"
+            app:pinAnimationType="fromBottom"
+            app:pinBackgroundDrawable="@drawable/bg_pin"
+            app:pinBackgroundIsSquare="true"
+            app:pinCharacterSpacing="@dimen/common_size6"
+            app:pinTextBottomPadding="@dimen/common_padding_middle"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:id="@+id/mOtpTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="@dimen/common_margin"
+            android:paddingVertical="@dimen/common_padding_middle"
+            android:text="@string/resend_otp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_big_size"
+            app:layout_constraintTop_toBottomOf="@+id/mCodeEt" />
+
+        <Button
+            android:id="@+id/mContinueBtn"
+            style="@style/FullBtnStyle"
+            android:layout_margin="@dimen/common_margin_middle"
+            android:text="@string/CONTINUE"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

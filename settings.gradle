@@ -1,0 +1,2 @@
+include ':app', ':beepcore'
+rootProject.name='BeepApp'

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <include
+            android:id="@+id/titleLayout"
+            layout="@layout/titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_header_bar_height" />
+
+        <ImageView
+            android:id="@+id/mPhoneIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin_middle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleLayout"
+            app:srcCompat="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/mLoginTipTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_margin"
+            android:paddingHorizontal="@dimen/common_margin_large"
+            android:text="@string/login_tip"
+            android:textAlignment="center"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/text_large_size"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/mPhoneIv" />
+
+        <EditText
+            android:id="@+id/mPhoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_size55"
+            android:layout_margin="@dimen/common_margin_middle"
+            android:background="@drawable/border_line"
+            app:layout_constraintTop_toBottomOf="@+id/mLoginTipTv" />
+
+        <Button
+            android:id="@+id/mLoginBtn"
+            style="@style/FullBtnStyle"
+            android:layout_margin="@dimen/common_margin_middle"
+            android:text="@string/CONTINUE"
+            app:layout_constraintTop_toBottomOf="@+id/mPhoneEt" />
+
+        <TextView
+            android:id="@+id/mPolicyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/common_margin"
+            android:paddingVertical="@dimen/common_padding_middle"
+            android:text="@string/policy"
+            android:textAlignment="center"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_middle_size"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

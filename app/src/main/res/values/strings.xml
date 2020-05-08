@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BeepApp</string>
+    <string name="home">Home</string>
+    <string name="cashback_history">Cashback History</string>
+    <string name="order_history">Order History</string>
+    <string name="account">Account</string>
+    <string name="login_tip">Login with your mobile number to check your orders history:</string>
+    <string name="CONTINUE">CONTINUE</string>
+    <string name="policy">By tapping to continue, you agree to our Terms of Service,and Privacy Policy.</string>
+    <string name="loading">loading...</string>
+    <string name="mobile_verification">Mobile Verification</string>
+    <string name="otp_tip1">We’ve sent you a One Time Passcode (OTP) to +</string>
+    <string name="otp_tip2">. Enter it below to continue.</string>
+    <string name="resend_otp">Resend OTP? </string>
+    <string name="exit_app">Press again to exit the program</string>
+    <string name="network_error">Your network is down!</string>
+    <string name="request_error">REQUEST ERROR!</string>
+</resources>
